@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     type: 'website',
   },
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
   robots: 'index, follow',
 };
 
