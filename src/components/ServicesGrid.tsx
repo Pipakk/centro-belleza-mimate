@@ -43,9 +43,11 @@ export function ServicesGrid() {
                   <p className="text-charcoal/80 text-sm leading-relaxed mb-3">
                     {service.shortDescription}
                   </p>
-                  {service.priceFrom && (
+                  {'priceFrom' in service && service.priceFrom && (
                     <p className="text-rose-500 font-medium text-sm">
-                      {service.priceNote ? `${service.priceNote} ${service.priceFrom}€` : `Desde ${service.priceFrom}€`}
+                      {'priceNote' in service && service.priceNote
+                        ? `${service.priceNote} ${service.priceFrom}€`
+                        : `Desde ${service.priceFrom}€`}
                     </p>
                   )}
                 </div>
