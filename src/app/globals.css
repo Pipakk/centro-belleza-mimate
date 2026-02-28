@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: 253 252 251;
+  --color-rose-100: 249 235 232;
+  --color-charcoal: 45 41 38;
+  --color-ink: 26 24 22;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-charcoal antialiased;
+  }
+  /* Focus visible para accesibilidad */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-rose-400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Overlay del hero */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 24, 22, 0.35) 0%,
+    rgba(26, 24, 22, 0.5) 100%
+  );
+}
